@@ -51,130 +51,290 @@ export const EDUCATION_DATA: EducationItem[] = [
 ];
 
 export const EXPERIENCE_DATA: ExperienceItem[] = [
+  // ── 1. BPM FIA UI — Head of Institutional Relations ──────────────────────
   {
     id: "exp-1",
     role: "Head of Institutional Relations Commission",
     organization: "BPM FIA UI (Badan Perwakilan Mahasiswa)",
-    period: "Mar 2026 - Present",
-    duration: "3 mos",
+    period: "Mar 2026 - Saat ini",
+    duration: "3 bln",
     type: "PR & Leadership",
     description: [
       "Memimpin pengawasan, komunikasi, serta koordinasi hubungan kelembagaan eksternal dan internal FIA UI.",
       "Menjalin komunikasi strategis dengan organisasi mahasiswa tingkat fakultas dan universitas.",
       "Mengonseptualisasikan struktur kolaboratif yang partisipatif untuk meningkatkan keterlibatan pemangku kepentingan."
     ],
-    skills: ["Leadership", "Strategic Communications", "Team Mentoring"]
+    skills: ["Leadership", "Strategic Communications", "Team Mentoring"],
+    logo: "/asset/pengalaman/logo organisasi/BPM FIA UI.png",
+    mediaImages: []
   },
+
+  // ── 2. Girl Up UI — PR & Social Media ────────────────────────────────────
   {
     id: "exp-2",
     role: "Public Relation and Social Media Management Officer",
     organization: "Girl Up UI (Universitas Indonesia)",
-    period: "Jan 2026 - Present",
-    duration: "5 mos",
+    period: "Jan 2026 - Saat ini",
+    duration: "5 bln",
     type: "PR & Leadership",
     description: [
       "Bertanggung jawab atas hubungan kelembagaan (Institutional Relations) serta publikasi media.",
       "Menggagas kampanye digital interaktif mengenai kesetaraan gender dan pengembangan kepemimpinan muda.",
       "Merancang aset visual kreatif dengan Canva untuk memperkuat kehadiran digital organisasi."
     ],
-    skills: ["Canva", "Strategic Communications", "Creative Writing"]
+    skills: ["Canva", "Strategic Communications", "Creative Writing"],
+    logo: "/asset/pengalaman/logo organisasi/Girl Up UI (Indonesia).png",
+    mediaImages: []
   },
+
+  // ── 3. Self Employed — Drawing, Art, Mini Business ───────────────────────
   {
     id: "exp-3",
     role: "Drawing Enthusiast, Art Lover, & Mini Business Owner",
     organization: "Self Employed / Wiraswasta",
-    period: "Jan 2018 - Present",
-    duration: "8 years 5 mos",
+    period: "Jan 2018 - Saat ini",
+    duration: "8 thn 5 bln",
     type: "Creative & Art",
     description: [
-      "Mengoperasikan bisnis mini kreatif berupa kerajinan bunga artifisial, ilustrasi karakter (sketsa karakter animasi Jepang), serta journaling kreatif.",
+      "Mengoperasikan bisnis mini kreatif: kerajinan bunga artifisial (Selling Artificial Flowers), ilustrasi karakter animasi Jepang (Sketch), serta Digital Art, Canva, dan Journaling.",
       "Memasarkan dan mendistribusikan karya seni tradisional dan digital secara mandiri.",
-      "Mengembangkan kemahiran menggambar manual berjam-jam secara presisi serta mengombinasikannya dengan strategi visual digital."
+      "Mengembangkan kemahiran menggambar manual secara presisi serta mengombinasikannya dengan strategi visual digital."
     ],
-    skills: ["Traditional Art Skills", "Canva", "Creative Writing"]
+    skills: ["Traditional Art Skills", "Canva", "Creative Writing"],
+    logo: "/asset/pengalaman/logo organisasi/Self Employed.png",
+    mediaImages: [
+      "/asset/pengalaman/galeri pengalaman/Self Employed/Selling Artificial Flowers.png",
+      "/asset/pengalaman/galeri pengalaman/Self Employed/Digital Art, Playing with Canva, and Journaling.png",
+      "/asset/pengalaman/galeri pengalaman/Self Employed/Sketch.png",
+    ]
   },
+
+  // ── 4. UniVerse Expo 2026 — Project Officer ───────────────────────────────
   {
     id: "exp-4",
-    role: "PIC of Design and Publication",
-    organization: "FIA CENDEKIA 2025",
-    period: "May 2025 - Dec 2025",
-    duration: "8 mos",
-    type: "Creative & Art",
-    description: [
-      "Memimpin perancangan identitas visual FIA Cendekia 2025 dari konsep hingga rilis publik.",
-      "Mendesain logo utama yang melambangkan lentera menyala, buku terbuka, dan elemen orbit sebagai representasi ilmu, eksplorasi, dan pencerahan.",
-      "Mengatur tata letak feed Instagram yang bernilai estetika tinggi untuk mengedukasi peserta program."
-    ],
-    skills: ["Canva", "Strategic Communications", "Traditional Art Skills"]
-  },
-  {
-    id: "exp-5",
-    role: "Coordinator of Event",
-    organization: "Battle of Knowledge 1.0",
-    period: "Apr 2025 - Dec 2025",
-    duration: "9 mos",
+    role: "Project Officer",
+    organization: "UniVerse Expo 2026",
+    period: "Des 2025 - Jan 2026",
+    duration: "2 bln",
     type: "Events & Mentoring",
     description: [
-      "Mengoordinasikan rangkaian perlombaan BoK 1.0 yang mencakup divisi Debat, Kuis, Desain Poster, serta Liaison Officer (LO).",
-      "Memandu skema evaluasi performa kepanitiaan dan alur operasional acara agar berjalan mulus.",
-      "Memimpin kolaborasi lintas fungsional dengan tim kreatif, humas, dan logistik."
+      "Mengembangkan konsep acara eksibisi kreatif masa depan dan mengontrol manajemen logistik teknis.",
+      "Membina kemitraan strategis dengan beberapa merek kreatif anak muda."
     ],
-    skills: ["Leadership", "Strategic Communications", "Team Mentoring"]
+    skills: ["Leadership", "Financial Analysis"],
+    logo: "/asset/pengalaman/logo organisasi/UniVerse Expo 2026.png",
+    mediaImages: []
   },
+
+  // ── 5. ADAPTASI UI 2025 — Staff Dokumentasi ──────────────────────────────
+  {
+    id: "exp-5",
+    role: "Staff at Dokumentasi",
+    organization: "ADAPTASI UI 2025",
+    period: "Sep 2025 - Des 2025",
+    duration: "4 bln",
+    type: "Creative & Art",
+    description: [
+      "Mengambil dokumentasi foto dan video definisi tinggi secara real-time untuk orientasi mahasiswa baru.",
+      "Berkolaborasi mengedit publikasi cuplikan video kreatif berdurasi pendek."
+    ],
+    skills: ["Canva", "Traditional Art Skills"],
+    logo: "/asset/pengalaman/logo organisasi/ADAPTASI UI.png",
+    mediaImages: []
+  },
+
+  // ── 6. PESPORA — PIC of Design ────────────────────────────────────────────
   {
     id: "exp-6",
+    role: "PIC of Design",
+    organization: "PESPORA",
+    period: "Jun 2025 - Des 2025",
+    duration: "7 bln",
+    type: "Creative & Art",
+    description: [
+      "Mendesain dan membuat logo, feed Instagram @pesporanegara, mengorganisir LinkedIn, serta menyiapkan proposal sponsorship untuk PESPORA 7.0.",
+      "Memimpin identitas visual acara dari konsep awal hingga publikasi resmi.",
+      "Berkolaborasi lintas divisi untuk menghasilkan konten visual yang kohesif dan komunikatif."
+    ],
+    skills: ["Canva", "Strategic Communications", "Traditional Art Skills"],
+    logo: "/asset/pengalaman/logo organisasi/PESPORA.png",
+    mediaImages: [
+      "/asset/pengalaman/galeri pengalaman/PPESPORA/feeds1.png",
+      "/asset/pengalaman/galeri pengalaman/PPESPORA/feeds2.png",
+    ]
+  },
+
+  // ── 7. FIA CENDEKIA — PIC of Design and Publication ──────────────────────
+  {
+    id: "exp-7",
+    role: "PIC of Design and Publication",
+    organization: "FIA CENDEKIA",
+    period: "Mei 2025 - Des 2025",
+    duration: "8 bln",
+    type: "Creative & Art",
+    description: [
+      "Memimpin perancangan identitas visual FIA Cendekia 2025 dari konsep hingga rilis publik, terinspirasi dari Age of Enlightenment.",
+      "Mendesain logo utama: lentera menyala, buku terbuka, dan elemen orbit sebagai simbol ilmu, eksplorasi, dan pencerahan.",
+      "Menerapkan estetika vintage untuk mencerminkan kedalaman historis sambil mempertahankan relevansi kontemporer."
+    ],
+    skills: ["Canva", "Strategic Communications", "Traditional Art Skills"],
+    logo: "/asset/pengalaman/logo organisasi/FIA CENDEKIA.png",
+    mediaImages: [
+      "/asset/pengalaman/galeri pengalaman/FIA CENDIKIA/Starter Feeds Introduction.png",
+      "/asset/pengalaman/galeri pengalaman/FIA CENDIKIA/What we made this far!.png",
+    ]
+  },
+
+  // ── 8. Himanera Muda — Coordinator of Event (Battle of Knowledge 1.0) ─────
+  {
+    id: "exp-8",
+    role: "Coordinator of Event",
+    organization: "Battle of Knowledge 1.0 · Kontrak",
+    period: "Apr 2025 - Des 2025",
+    duration: "9 bln",
+    type: "Events & Mentoring",
+    description: [
+      "Mengoordinasikan rangkaian perlombaan BoK 1.0: divisi Debat, Kuis, Desain Poster, serta Liaison Officer (LO).",
+      "Memimpin perencanaan efektif, eksekusi mulus, dan kolaborasi lintas tim untuk festival akademik yang kompetitif.",
+      "Memandu skema evaluasi performa kepanitiaan dan alur operasional acara."
+    ],
+    skills: ["Leadership", "Strategic Communications", "Team Mentoring"],
+    logo: "/asset/pengalaman/logo organisasi/default.png",
+    mediaImages: [
+    ]
+  },
+
+  // ── 9. BEM FIA UI — Staff Dept. Education & Science ──────────────────────
+  {
+    id: "exp-9",
+    role: "Staff at Department of Education and Science",
+    organization: "BEM FIA UI · Kontrak",
+    period: "Mar 2025 - Des 2025",
+    duration: "10 bln",
+    type: "Events & Mentoring",
+    description: [
+      "Bertugas di Departemen Pendidikan dan Keilmuan BEM FIA UI selama 10 bulan.",
+      "Berkontribusi dalam program-program akademik dan keilmuan untuk mahasiswa FIA UI.",
+      "Mendukung pelaksanaan kegiatan departemen dan koordinasi antar divisi."
+    ],
+    skills: ["Leadership", "Team Mentoring", "Strategic Communications"],
+    logo: "/asset/pengalaman/logo organisasi/BEM FIA UI 2026.png",
+    mediaImages: [
+      "/asset/pengalaman/galeri pengalaman/BEM FIA UI/Certificate.png",
+    ]
+  },
+
+  // ── 10. LDMK FIA UI — Mentor ──────────────────────────────────────────────
+  {
+    id: "exp-10",
     role: "Mentor",
     organization: "LDMK FIA UI",
-    period: "Aug 2025 - Nov 2025",
-    duration: "4 mos",
+    period: "Agu 2025 - Nov 2025",
+    duration: "4 bln",
     type: "Events & Mentoring",
     description: [
       "Menjadi mentor pendamping akademik dan karakter untuk Kelompok 23 FIA UI.",
       "Mengisi sesi pengembangan kepemimpinan, strategi belajar, dan adaptasi mahasiswa baru.",
       "Menciptakan iklim diskusi yang suportif dan membina kerja sama kelompok berdurasi intensif."
     ],
-    skills: ["Team Mentoring", "Leadership", "Creative Writing"]
+    skills: ["Team Mentoring", "Leadership", "Creative Writing"],
+    logo: "/asset/pengalaman/logo organisasi/LDMK FIA UI.png",
+    mediaImages: [
+      "/asset/pengalaman/galeri pengalaman/LDKM FIA UI/With Kelompok 23.png",
+    ]
   },
+
+  // ── 11. Administration Festival FIA UI ────────────────────────────────────
   {
-    id: "exp-7",
-    role: "Class Leader",
-    organization: "SMAS BPS&K I JAKARTA",
-    period: "Jun 2021 - Jun 2023",
-    duration: "2 years 1 mo",
-    type: "PR & Leadership",
-    description: [
-      "Dipilih secara demokratis untuk memimpin urusan perwakilan kelas dan memediasi aspirasi siswa ke staf akademis.",
-      "Menginisiasi pembentukan kelompok belajar efektif guna meningkatkan kesiapan ujian rekan seangkatan.",
-      "Mengatur agenda operasional rutin kelas dan menyelenggarakan forum diskusi kreatif."
-    ],
-    skills: ["Leadership", "Strategic Communications", "Team Mentoring"]
-  },
-  {
-    id: "exp-8",
-    role: "Project Officer",
-    organization: "UniVerse Expo 2026",
-    period: "Dec 2025 - Jan 2026",
-    duration: "2 mos",
+    id: "exp-11",
+    role: "Coordinator of Finance",
+    organization: "Administration Festival FIA UI",
+    period: "Apr 2025 - Okt 2025",
+    duration: "7 bln",
     type: "Events & Mentoring",
-    description: [
-      "Mengembangkan konsep acara eksibisi kreatif masa depan dan mengontrol manajemen logistik teknis.",
-      "Membina kemitraan strategis dengan beberapa merek kreatif anak muda."
-    ],
-    skills: ["Leadership", "Financial Analysis"]
+    description: ["Coordinated the Finance Department at Administration Festival 9, leading the Sponsorship, Ticketing, and Fundraising divisions to optimize revenue streams, organized campaign, maintain budget efficiency, and support the overall success of the event."],
+    skills: ["Leadership", "Financial Analysis"],
+    logo: "/asset/pengalaman/logo organisasi/Administration Festival FIA UI.png",
+    mediaImages: [
+      "/asset/pengalaman/galeri pengalaman/Administration Festival FIA UI/Certificate.png",
+    ]
   },
+
+  // ── 12. FKMPI — Essay Competition ─────────────────────────────────────────
   {
-    id: "exp-9",
-    role: "Staff at Dokumentasi",
-    organization: "ADAPTASI UI 2025",
-    period: "Sep 2025 - Dec 2025",
-    duration: "4 mos",
+    id: "exp-12",
+    role: "Essay Competition",
+    organization: "Forum Komunikasi Mahasiswa Politeknik se-Indonesia (FKMPI)",
+    period: "Des 2024 - Jan 2025",
+    duration: "2 bln",
+    type: "Events & Mentoring",
+    description: ["This essay discusses the role of the Indonesian International Student Mobility Awards (IISMA) program as a form of implementing the Sustainable Development Goals (SDGs) in quality education to support the Golden Indonesia 2045. Using a qualitative approach, this essay highlights how IISMA not only improves the quality of Indonesian human resources through global experience, but also encourages awardees to be active in SDGs-based social campaigns. By adopting a public administration and governance perspective, it emphasizes the importance of policy flexibility and collaboration between students, government, and other sectors in sustainable development."],
+    skills: ["Creative Writing", "Strategic Communications"],
+    logo: "/asset/pengalaman/logo organisasi/Forum Komunikasi Mahasiswa Politeknik se-Indonesia (FKMPI).png",
+    mediaImages: [
+      "/asset/pengalaman/galeri pengalaman/Forum Komunikasi Mahasiswa Politeknik se-Indonesia (FKMPI)/Certificate.png",
+    ]
+  },
+
+  // ── 13. UNESA — Essay Competition ─────────────────────────────────────────
+  {
+    id: "exp-13",
+    role: "Essay Competition",
+    organization: "Universitas Negeri Surabaya (UNESA)",
+    period: "Des 2024 - Jan 2025",
+    duration: "",
+    type: "Events & Mentoring",
+    description: ["Industry 5.0 brings a revolution that emphasizes the collaboration of humans and technology to create more inclusive solutions. In this essay, we explore the role of youth as agents of change in the development and downstreaming of bionic hand technology for people with disabilities in Indonesia. By linking the principles of public administration, public policy, as well as 3D printing and IoT-based innovation, this essay highlights how synergy between government, industry, and community can ensure this technology is not only innovative, but also affordable and sustainable for people in need."],
+    skills: ["Creative Writing", "Strategic Communications"],
+    logo: "/asset/pengalaman/logo organisasi/Universitas Negeri Surabaya (UNESA).png",
+    mediaImages: [
+      "/asset/pengalaman/galeri pengalaman/Universitas Negeri Surabaya (UNESA)/Certificate.png",
+    ]
+  },
+
+  // ── 14. GEMAFIA UI — Decorator (placeholder) ──────────────────────────────
+  {
+    id: "exp-14",
+    role: "Decorator",
+    organization: "GEMAFIA UI",
+    period: "Sep 2024",
+    duration: "1 bln",
     type: "Creative & Art",
-    description: [
-      "Mengambil dokumentasi foto dan video definisi tinggi secara real-time untuk orientasi mahasiswa baru.",
-      "Berkolaborasi mengedit publikasi cuplikan video kreatif berdurasi pendek."
-    ],
-    skills: ["Canva", "Traditional Art Skills"]
-  }
+    description: ["In the voluntary RADAYA 2024 program, our decoration team, made various decorations with the theme of the movie “Charlie and The Chocolate Factory”. We brought ideas like melted ice cream, small pieces like chocolate cardboard, various balloons, flag designs, and even Charlie's own stick."],
+    skills: ["Traditional Art Skills", "Creative Writing"],
+    logo: "/asset/pengalaman/logo organisasi/Himanera Muda.png",
+    mediaImages: [
+      "/asset/pengalaman/galeri pengalaman/Himanera Muda/Second Look.png",
+      "/asset/pengalaman/galeri pengalaman/Himanera Muda/The Looks.png",
+    ]
+  },
+
+  {
+    id: "exp-15",
+    role: "OSN Geografi",
+    organization: "SMAS BPS&K 1 JAKARTA",
+    period: "",
+    duration: "",
+    type: "Events & Mentoring",
+    description: ["Became the coordinator of the geography school team in the learning process and also become a participant."],
+    skills: ["Leadership", "Team Mentoring"],
+    logo: "/asset/pengalaman/logo organisasi/default",
+    mediaImages: []
+  },
+
+  // ── 15. Bedah Kampus UI — OSIS (placeholder) ──────────────────────────────
+  {
+    id: "exp-16",
+    role: "OSIS",
+    organization: "SMPN 213 JAKARTA",
+    period: "",
+    duration: "",
+    type: "PR & Leadership",
+    description: ["Being a member of the culture section, I became the coordinator of the painting extracurricular activity and supported small organizational matters such as being a liaison to various elementary schools to invite them to join the event, and maintaining order during the event. However, I did not fulfill my term of office due to a serious problem."],
+    skills: ["Leadership", "Team Mentoring"],
+    logo: "/asset/pengalaman/logo organisasi/default",
+    mediaImages: []
+  },
 ];
 
 export const SKILLS_DATA: SkillItem[] = [

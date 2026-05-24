@@ -16,6 +16,8 @@ export interface ExperienceItem {
   type: string; // 'PR & Leadership' | 'Creative & Art' | 'Events & Mentoring'
   description: string[];
   skills: string[];
+  logo?: string;       // path ke logo organisasi
+  mediaImages?: string[]; // path ke gambar media/dokumentasi (HD)
 }
 
 export interface SkillItem {
