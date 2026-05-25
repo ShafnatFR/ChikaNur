@@ -43,7 +43,7 @@ export default function Skills() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.3, delay: index * 0.03 }}
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-2xl bg-pink-50/40 border border-pink-100/60 hover:border-pink-300 hover:bg-pink-50 text-slate-700 hover:text-pink-600 font-medium text-xs sm:text-sm tracking-wide transition-all duration-300 shadow-3xs cursor-default"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-2xl bg-pink-50/40 border border-pink-200 hover:border-pink-400 hover:bg-pink-50 text-slate-700 hover:text-pink-600 font-medium text-xs sm:text-sm tracking-wide transition-all duration-300 shadow-3xs cursor-default"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-pink-500 flex-shrink-0" />
                     <span>{skill.name}</span>
@@ -74,7 +74,7 @@ export default function Skills() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.25, delay: index * 0.04 }}
-                    className="flex flex-col items-center gap-2 p-3 rounded-2xl bg-neutral-50 border border-slate-100 hover:border-pink-200 hover:bg-pink-50/30 transition-all duration-200 cursor-default group"
+                    className="flex flex-col items-center gap-2 p-3 rounded-2xl bg-neutral-50 border border-pink-200 hover:border-pink-400 hover:bg-pink-50/30 transition-all duration-200 cursor-default group"
                   >
                     <span className="text-2xl">{tool.icon}</span>
                     <span className="text-[10px] sm:text-xs font-semibold text-slate-600 group-hover:text-pink-600 text-center leading-tight transition-colors">
