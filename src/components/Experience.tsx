@@ -109,8 +109,8 @@ function ExperienceCard({ exp, index }: ExperienceCardProps) {
     const rect = card.getBoundingClientRect();
     const mouseX = e.clientX - rect.left - rect.width / 2;
     const mouseY = e.clientY - rect.top - rect.height / 2;
-    setRotateY((mouseX / (rect.width / 2)) * 8);
-    setRotateX(-(mouseY / (rect.height / 2)) * 8);
+    setRotateY((mouseX / (rect.width / 2)) * 3);
+    setRotateX(-(mouseY / (rect.height / 2)) * 3);
   };
 
   const handleMouseLeave = () => {
@@ -250,6 +250,10 @@ export default function Experience() {
     activeTab === 'All' ? true : exp.type === activeTab
   );
 
+  // Split cards into two columns for masonry effect (odd → left, even → right)
+  const leftCol  = filteredExperience.filter((_, i) => i % 2 === 0);
+  const rightCol = filteredExperience.filter((_, i) => i % 2 === 1);
+
   return (
     <section id="experience" className="py-24 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -286,13 +290,43 @@ export default function Experience() {
           ))}
         </div>
 
-        {/* Experience Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-          <AnimatePresence mode="popLayout">
-            {filteredExperience.map((exp, index) => (
-              <ExperienceCard key={exp.id} exp={exp} index={index} />
-            ))}
-          </AnimatePresence>
+        {/* ── Masonry layout: 2 independent flex columns ── */}
+        <div className="max-w-6xl mx-auto">
+          {/* Mobile: single column */}
+          <div className="flex flex-col gap-6 md:hidden">
+            <AnimatePresence mode="popLayout">
+              {filteredExperience.map((exp, index) => (
+                <ExperienceCard key={exp.id} exp={exp} index={index} />
+              ))}
+            </AnimatePresence>
+          </div>
+
+          {/* Desktop: two independent columns → true masonry */}
+          <div className="hidden md:flex gap-6 items-start">
+            {/* Left column */}
+            <div className="flex-1 flex flex-col gap-6">
+              <AnimatePresence mode="popLayout">
+                {leftCol.map((exp) => {
+                  const globalIndex = filteredExperience.indexOf(exp);
+                  return (
+                    <ExperienceCard key={exp.id} exp={exp} index={globalIndex} />
+                  );
+                })}
+              </AnimatePresence>
+            </div>
+
+            {/* Right column */}
+            <div className="flex-1 flex flex-col gap-6">
+              <AnimatePresence mode="popLayout">
+                {rightCol.map((exp) => {
+                  const globalIndex = filteredExperience.indexOf(exp);
+                  return (
+                    <ExperienceCard key={exp.id} exp={exp} index={globalIndex} />
+                  );
+                })}
+              </AnimatePresence>
+            </div>
+          </div>
         </div>
 
       </div>

@@ -1,4 +1,4 @@
-import { EducationItem, ExperienceItem, SkillItem, ArtworkMock } from './types';
+﻿import { EducationItem, ExperienceItem, SkillItem, ArtworkMock } from './types';
 
 export const CHIKA_PROFILE = {
   fullName: "Chika Nur Siswoyo",
@@ -318,7 +318,7 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
     type: "Events & Mentoring",
     description: ["Became the coordinator of the geography school team in the learning process and also become a participant."],
     skills: ["Leadership", "Team Mentoring"],
-    logo: "/asset/pengalaman/logo organisasi/default",
+    logo: "",
     mediaImages: []
   },
 
@@ -348,6 +348,70 @@ export const SKILLS_DATA: SkillItem[] = [
   { name: "Public Administration Governance", category: "Technical", level: 82 },
   { name: "Event Management", category: "Soft", level: 89 },
   { name: "Public Relations Campaigning", category: "Soft", level: 92 }
+];
+
+export const TOOLS_DATA = [
+  { name: "Canva Pro", icon: "🎨", category: "Design" },
+  { name: "Figma", icon: "✏️", category: "Design" },
+  { name: "Microsoft Office", icon: "📊", category: "Productivity" },
+  { name: "Google Workspace", icon: "🗂️", category: "Productivity" },
+  { name: "Traditional Drawing", icon: "🖊️", category: "Art" },
+  { name: "Acrylic Painting", icon: "🖌️", category: "Art" },
+  { name: "Instagram Content", icon: "📱", category: "Social Media" },
+  { name: "LinkedIn Management", icon: "💼", category: "Social Media" },
+];
+
+export const ACHIEVEMENTS_DATA = [
+  // ── Universitas Indonesia (2024–kini) ─────────────────────────────────────
+  {
+    title: "Head of IR Commission",
+    subtitle: "BPM FIA UI · Mar 2026–kini",
+    detail: "Memimpin komisi hubungan kelembagaan eksternal & internal tingkat fakultas",
+    icon: "🎓",
+    color: "bg-emerald-50 border-emerald-200 text-emerald-700",
+    dot: "bg-emerald-400",
+  },
+  {
+    title: "PR & Social Media Officer",
+    subtitle: "Girl Up UI · Jan 2026–kini",
+    detail: "Mengelola hubungan kelembagaan, kampanye digital kesetaraan gender, dan aset visual Canva",
+    icon: "📣",
+    color: "bg-rose-50 border-rose-200 text-rose-700",
+    dot: "bg-rose-400",
+  },
+  {
+    title: "Cum Laude",
+    subtitle: "Universitas Indonesia · 2024–kini",
+    detail: "Predikat akademis tertinggi sejak semester pertama",
+    icon: "⭐",
+    color: "bg-pink-50 border-pink-200 text-pink-700",
+    dot: "bg-pink-400",
+  },
+  // ── SMAS BPS&K I Jakarta (2022–2024) ──────────────────────────────────────
+  {
+    title: "Lulusan Terbaik IPS",
+    subtitle: "SMAS BPS&K I Jakarta · 2024",
+    detail: "IPK 94.64 — Peringkat 1 Kelas Eligible Angkatan 2024",
+    icon: "🥇",
+    color: "bg-amber-50 border-amber-200 text-amber-700",
+    dot: "bg-amber-400",
+  },
+  {
+    title: "Class Leader 2 Tahun",
+    subtitle: "SMAS BPS&K I Jakarta · 2021–2023",
+    detail: "Dipilih demokratis, memimpin forum & kelompok belajar",
+    icon: "👑",
+    color: "bg-violet-50 border-violet-200 text-violet-700",
+    dot: "bg-violet-400",
+  },
+  {
+    title: "Koordinator OSN Geografi",
+    subtitle: "SMAS BPS&K I Jakarta · 2023",
+    detail: "Memimpin tim olimpiade sains nasional bidang Geografi",
+    icon: "🗺️",
+    color: "bg-sky-50 border-sky-200 text-sky-700",
+    dot: "bg-sky-400",
+  },
 ];
 
 export const ARTWORKS_DATA: ArtworkMock[] = [

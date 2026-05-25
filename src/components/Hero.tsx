@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowDownRight, Award, Compass, Sparkles, Send } from 'lucide-react';
+import { ArrowDownRight, Award, Sparkles, Send, Linkedin, Instagram, Mail } from 'lucide-react';
 import { CHIKA_PROFILE } from '../data';
 
 export default function Hero() {
@@ -114,6 +114,35 @@ export default function Hero() {
                 <Send className="w-4 h-4 text-pink-500" />
               </button>
             </motion.div>
+
+            {/* Social Links */}
+            <motion.div variants={itemVariants} className="flex items-center gap-3 pt-1">
+              <a
+                href="https://www.linkedin.com/in/chikanursiswoyо"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-[#0A66C2]/10 hover:bg-[#0A66C2]/20 text-[#0A66C2] font-medium text-sm transition-all duration-200 hover:-translate-y-0.5"
+              >
+                <Linkedin className="w-4 h-4" />
+                <span>LinkedIn</span>
+              </a>
+              <a
+                href="https://www.instagram.com/chikannr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-pink-50 hover:bg-pink-100 text-pink-600 font-medium text-sm transition-all duration-200 hover:-translate-y-0.5"
+              >
+                <Instagram className="w-4 h-4" />
+                <span>Instagram</span>
+              </a>
+              <a
+                href="mailto:chikanur2504@gmail.com"
+                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 font-medium text-sm transition-all duration-200 hover:-translate-y-0.5"
+              >
+                <Mail className="w-4 h-4" />
+                <span>Email</span>
+              </a>
+            </motion.div>
           </motion.div>
 
           {/* Right Column: Visual Avatar Setup */}
@@ -130,10 +159,9 @@ export default function Hero() {
               {/* Central Premium Graphic Avatar Frame */}
               <div className="w-full h-full rounded-3xl bg-white border-2 border-pink-100 shadow-xl overflow-hidden relative group">
                 <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600&h=600"
+                  src="/asset/profil.png"
                   alt="Chika Nur Siswoyo"
-                  referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover object-[center_30%] group-hover:scale-105 transition-transform duration-700"
                 />
                 
                 {/* Soft pink and dark vignette overlay for depth and premium quality */}
@@ -150,7 +178,7 @@ export default function Hero() {
               <motion.div
                 variants={floatingVariants}
                 animate="animate"
-                className="absolute -top-4 -left-6 bg-white border border-yellow-200 rounded-2xl shadow-md p-3 flex items-center gap-2"
+                className="absolute -top-4 -right-6 bg-white border border-yellow-200 rounded-2xl shadow-md p-3 flex items-center gap-2"
                 style={{ animationDelay: '0s' }}
               >
                 <div className="w-8 h-8 rounded-lg bg-yellow-400 font-bold flex items-center justify-center text-xs text-slate-900 shadow-inner">
@@ -166,7 +194,7 @@ export default function Hero() {
               <motion.div
                 variants={floatingVariants}
                 animate="animate"
-                className="absolute -bottom-4 -right-6 bg-white border border-pink-100 rounded-2xl shadow-md p-3 flex items-center gap-2"
+                className="absolute -bottom-14 -left-6 bg-white border border-pink-100 rounded-2xl shadow-md p-3 flex items-center gap-2"
                 style={{ animationDelay: '1.5s' }}
               >
                 <div className="w-8 h-8 rounded-lg bg-pink-50 flex items-center justify-center text-pink-500 shadow-sm">
@@ -182,7 +210,7 @@ export default function Hero() {
               <motion.div
                 variants={floatingVariants}
                 animate="animate"
-                className="absolute top-1/2 -right-10 bg-white border border-slate-100 rounded-2xl shadow-md p-2.5 flex items-center gap-2"
+                className="absolute top-1/2 -left-10 bg-white border border-slate-100 rounded-2xl shadow-md p-2.5 flex items-center gap-2"
                 style={{ animationDelay: '0.75s' }}
               >
                 <div className="w-7 h-7 rounded-full bg-slate-50 flex items-center justify-center">

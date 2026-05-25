@@ -10,7 +10,6 @@ import About from './components/About';
 import Education from './components/Education';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 export default function App() {
@@ -18,7 +17,7 @@ export default function App() {
 
   useEffect(() => {
     const handleScrollSpy = () => {
-      const sections = ['hero', 'about', 'education', 'experience', 'skills', 'contact'];
+      const sections = ['hero', 'about', 'education', 'experience', 'skills'];
       const scrollPosition = window.scrollY + 120; // offset of the nav heights
 
       for (const section of sections) {
@@ -63,9 +62,6 @@ export default function App() {
 
         {/* Skills Metrics & Creative Art Showcase Section */}
         <Skills />
-
-        {/* Contact Coordinates & Interlocking Form Section */}
-        <Contact />
       </main>
 
       {/* Understated Professional Signature Footer */}

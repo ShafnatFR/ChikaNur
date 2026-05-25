@@ -1,11 +1,9 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { PenTool, Star, X, Flame } from 'lucide-react';
-import { SKILLS_DATA, ARTWORKS_DATA } from '../data';
-import { ArtworkMock } from '../types';
+import { motion } from 'motion/react';
+import { PenTool, Trophy, Wrench, Flame } from 'lucide-react';
+import { SKILLS_DATA, TOOLS_DATA, ACHIEVEMENTS_DATA } from '../data';
 
 export default function Skills() {
-  const [selectedArtwork, setSelectedArtwork] = useState<ArtworkMock | null>(null);
 
   return (
     <section id="skills" className="py-24 bg-neutral-50/50 border-y border-pink-50 relative">
@@ -28,133 +26,108 @@ export default function Skills() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start max-w-6xl mx-auto">
           
-          {/* Left Side: Skills Metrics (5 columns) */}
-          <div className="lg:col-span-6 bg-white border border-slate-100/80 rounded-3xl p-6 sm:p-8 shadow-xs">
-            <div className="flex justify-between items-center mb-6">
-              <h3 className="text-xl font-extrabold text-slate-800 tracking-tight">Keahlian Khusus</h3>
-            </div>
+          {/* ── Left: Skills + Tools ── */}
+          <div className="lg:col-span-6 flex flex-col gap-6">
 
-            <p className="text-xs text-slate-400 font-light mb-8 -mt-2 text-left">
-              Berdasarkan evaluasi kontribusi organisasi di BPM FIA UI, Girl Up UI, dan performa akademis SMAS BPS&amp;K I Jakarta.
-            </p>
-
-            <div className="flex flex-wrap gap-2.5 text-left">
-              {SKILLS_DATA.map((skill, index) => (
-                <motion.div
-                  key={skill.name}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: index * 0.03 }}
-                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-2xl bg-pink-50/40 border border-pink-100/60 hover:border-pink-300 hover:bg-pink-50 text-slate-700 hover:text-pink-600 font-medium text-xs sm:text-sm tracking-wide transition-all duration-300 shadow-3xs cursor-default"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-pink-500 flex-shrink-0" />
-                  <span>{skill.name}</span>
-                </motion.div>
-              ))}
-            </div>
-
-            <div className="mt-8 p-4 rounded-2xl bg-slate-50 border border-slate-100/60 flex items-start gap-3">
-              <div className="w-8 h-8 rounded-lg bg-pink-100 flex items-center justify-center text-pink-500 flex-shrink-0">
-                <Flame className="w-4.5 h-4.5" />
-              </div>
-              <p className="text-[11px] sm:text-xs text-slate-500 leading-relaxed">
-                <strong>Alat Kreatif Utama:</strong> Figma, Canva Pro, Traditional Graphite Drawing pencils, Acrylic painting, Ink, and financial ledger models.
+            {/* Skill Tags */}
+            <div className="bg-white border border-slate-100/80 rounded-3xl p-6 sm:p-8 shadow-xs">
+              <h3 className="text-xl font-extrabold text-slate-800 tracking-tight mb-1">Keahlian Khusus</h3>
+              <p className="text-xs text-slate-400 font-light mb-6 text-left">
+                Berdasarkan evaluasi kontribusi organisasi di BPM FIA UI, Girl Up UI, dan performa akademis SMAS BPS&amp;K I Jakarta.
               </p>
+              <div className="flex flex-wrap gap-2.5 text-left">
+                {SKILLS_DATA.map((skill, index) => (
+                  <motion.div
+                    key={skill.name}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: index * 0.03 }}
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-2xl bg-pink-50/40 border border-pink-100/60 hover:border-pink-300 hover:bg-pink-50 text-slate-700 hover:text-pink-600 font-medium text-xs sm:text-sm tracking-wide transition-all duration-300 shadow-3xs cursor-default"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-pink-500 flex-shrink-0" />
+                    <span>{skill.name}</span>
+                  </motion.div>
+                ))}
+              </div>
+              <div className="mt-6 p-4 rounded-2xl bg-slate-50 border border-slate-100/60 flex items-start gap-3">
+                <div className="w-8 h-8 rounded-lg bg-pink-100 flex items-center justify-center text-pink-500 flex-shrink-0">
+                  <Flame className="w-4 h-4" />
+                </div>
+                <p className="text-[11px] sm:text-xs text-slate-500 leading-relaxed">
+                  <strong>Alat Kreatif Utama:</strong> Figma, Canva Pro, Traditional Graphite Drawing pencils, Acrylic painting, Ink, and financial ledger models.
+                </p>
+              </div>
             </div>
+
+            {/* Tools Grid */}
+            <div className="bg-white border border-slate-100/80 rounded-3xl p-6 sm:p-8 shadow-xs">
+              <div className="flex items-center gap-2 mb-5">
+                <Wrench className="w-4 h-4 text-pink-500" />
+                <h3 className="text-xl font-extrabold text-slate-800 tracking-tight">Alat &amp; Teknologi</h3>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                {TOOLS_DATA.map((tool, index) => (
+                  <motion.div
+                    key={tool.name}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.25, delay: index * 0.04 }}
+                    className="flex flex-col items-center gap-2 p-3 rounded-2xl bg-neutral-50 border border-slate-100 hover:border-pink-200 hover:bg-pink-50/30 transition-all duration-200 cursor-default group"
+                  >
+                    <span className="text-2xl">{tool.icon}</span>
+                    <span className="text-[10px] sm:text-xs font-semibold text-slate-600 group-hover:text-pink-600 text-center leading-tight transition-colors">
+                      {tool.name}
+                    </span>
+                    <span className="text-[9px] text-slate-400 uppercase tracking-wider">{tool.category}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
           </div>
 
-          {/* Right Side: Showcase Art Gallery (6 columns) */}
-          <div className="lg:col-span-6 space-y-6">
-            <div className="flex justify-between items-center">
-              <h3 className="text-xl font-extrabold text-slate-800 tracking-tight">Karya Kreatif &amp; Bisnis Mini</h3>
-              <span className="text-[10px] uppercase tracking-wider text-pink-500 font-bold bg-pink-50 px-2.5 py-1 rounded-full">
-                Drawing Enthusiast
-              </span>
+          {/* ── Right: Achievements ── */}
+          <div className="lg:col-span-6 flex flex-col gap-4">
+            <div className="flex items-center gap-2 mb-2">
+              <Trophy className="w-4 h-4 text-pink-500" />
+              <h3 className="text-xl font-extrabold text-slate-800 tracking-tight">Sertifikasi &amp; Penghargaan</h3>
             </div>
-            
-            <p className="text-slate-500 font-light text-xs sm:text-sm text-left">
-              Chika mengelola aktivitas kerajinan dan memproduksi gambar sketsa anime manual berjam-jam sebagai wirausaha mandiri sejak 2018. Klik karya di bawah ini untuk melihat ulasannya.
+            <p className="text-xs text-slate-400 font-light -mt-2 mb-2">
+              Rekam jejak prestasi akademik dan kepemimpinan yang telah dicapai.
             </p>
 
-            {/* Grid of Artwork Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {ARTWORKS_DATA.map((art) => (
-                <div
-                  key={art.title}
-                  onClick={() => setSelectedArtwork(art)}
-                  className="bg-white border border-slate-100 rounded-2xl p-3 hover:border-pink-300 shadow-xs hover:shadow-md cursor-pointer transition-all duration-300 group overflow-hidden"
-                >
-                  {/* Simulated Picture Holder */}
-                  <div className={`h-36 w-full rounded-xl ${art.imageFallback} border flex items-center justify-center relative overflow-hidden opacity-80 group-hover:opacity-100 transition-opacity duration-300`}>
-                    <span className="text-3xl">🎨</span>
-                    <div className="absolute bottom-2 left-2 right-2 bg-white/95 backdrop-blur-xs py-1 px-1.5 rounded-lg border border-pink-50 text-center">
-                      <span className="text-[10px] text-pink-600 font-extrabold uppercase tracking-widest">{art.category}</span>
-                    </div>
-                  </div>
+            {ACHIEVEMENTS_DATA.map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: index * 0.07 }}
+                className={`flex items-start gap-4 p-4 rounded-2xl border bg-white shadow-xs hover:shadow-md transition-all duration-300 cursor-default group`}
+              >
+                {/* Icon bubble */}
+                <div className={`w-11 h-11 rounded-xl flex items-center justify-center text-xl flex-shrink-0 border ${item.color}`}>
+                  {item.icon}
                 </div>
-              ))}
-            </div>
+
+                {/* Content */}
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-start justify-between gap-2">
+                    <h4 className="text-sm font-extrabold text-slate-800 leading-snug">{item.title}</h4>
+                    <span className={`w-2 h-2 rounded-full flex-shrink-0 mt-1.5 ${item.dot}`} />
+                  </div>
+                  <p className="text-[11px] font-semibold text-slate-500 mt-0.5">{item.subtitle}</p>
+                  <p className="text-[11px] text-slate-400 font-light mt-1 leading-relaxed">{item.detail}</p>
+                </div>
+              </motion.div>
+            ))}
+
+
           </div>
 
         </div>
-
-        {/* Artwork Detail Dialog Modal Overlay */}
-        <AnimatePresence>
-          {selectedArtwork && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95, y: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.95, y: 20 }}
-                className="bg-white border border-pink-100 rounded-3xl max-w-md w-full p-6 text-left relative shadow-2xl overflow-hidden"
-              >
-                {/* Header close trigger */}
-                <button
-                  onClick={() => setSelectedArtwork(null)}
-                  className="absolute top-4 right-4 p-2 rounded-full hover:bg-neutral-50 border border-slate-100 text-slate-400 hover:text-slate-700 cursor-pointer"
-                >
-                  <X className="w-4 h-4" />
-                </button>
-
-                {/* Simulated visual image large */}
-                <div className={`h-40 w-full rounded-2xl ${selectedArtwork.imageFallback} border flex flex-col items-center justify-center relative overflow-hidden mb-6`}>
-                  <span className="text-4xl animate-bounce">🎨</span>
-                  <span className="text-xs uppercase font-extrabold text-pink-600 tracking-wider bg-white px-3 py-1 rounded-full shadow-xs mt-3">
-                    Craft &amp; Fine Arts
-                  </span>
-                </div>
-
-                <div className="space-y-4">
-                  <span className="text-xs text-pink-500 font-bold uppercase tracking-widest">{selectedArtwork.category}</span>
-                  <h3 className="text-xl font-extrabold text-slate-800 tracking-tight leading-tight">
-                    {selectedArtwork.title}
-                  </h3>
-                  <p className="text-sm text-slate-600 leading-relaxed font-light">
-                    {selectedArtwork.description}
-                  </p>
-
-                  <div className="pt-3 border-t border-dashed border-pink-50 flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-pink-50 flex items-center justify-center text-pink-500">
-                      <Star className="w-4 h-4 fill-pink-500 text-pink-500" />
-                    </div>
-                    <p className="text-[11px] text-slate-500 leading-normal">
-                      <strong>Tradisi Seni Manual Chika:</strong> Setiap coretan tangan dinilai dengan ketelitian tinggi, membentuk kesabaran manajerial saat bekerja dalam birokrasi.
-                    </p>
-                  </div>
-                </div>
-
-                <button
-                  onClick={() => setSelectedArtwork(null)}
-                  className="w-full bg-pink-500 hover:bg-pink-600 text-white font-medium py-3 rounded-xl mt-6 cursor-pointer text-center text-xs sm:text-sm shadow-md shadow-pink-200"
-                >
-                  Dimengerti, Tutup Detail
-                </button>
-              </motion.div>
-            </div>
-          )}
-        </AnimatePresence>
-
       </div>
     </section>
   );
