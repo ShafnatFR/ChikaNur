@@ -23,14 +23,14 @@ export default function Education() {
   };
 
   return (
-    <section id="education" className="py-24 bg-neutral-50/50 border-y border-pink-50 relative">
+    <section id="education" className="py-32 bg-neutral-50/50 border-y border-pink-50 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-20">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-pink-50 text-pink-600 text-xs font-semibold uppercase tracking-wider mb-3">
             <GraduationCap className="w-4 h-4" />
-            <span>Kredensial</span>
+            <span>02 · Kredensial</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-800 tracking-tight">
             Riwayat Pendidikan
@@ -83,7 +83,7 @@ export default function Education() {
                       )}
 
                       <span className="block text-xs font-bold text-pink-400 uppercase tracking-widest">{edu.period}</span>
-                      <h3 className="text-xl sm:text-2xl font-black text-slate-800 tracking-tight mt-1">
+                      <h3 className="text-xl sm:text-2xl font-bold text-slate-800 tracking-tight mt-1">
                         {edu.institution}
                       </h3>
                       <p className="text-sm font-semibold text-slate-600 mt-1">{edu.degree}</p>

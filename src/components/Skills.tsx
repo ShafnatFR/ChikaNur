@@ -6,19 +6,19 @@ import { SKILLS_DATA, TOOLS_DATA, ACHIEVEMENTS_DATA } from '../data';
 export default function Skills() {
 
   return (
-    <section id="skills" className="py-24 bg-neutral-50/50 border-y border-pink-50 relative">
+    <section id="skills" className="py-32 bg-neutral-50/50 border-y border-pink-50 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-20">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-pink-50 text-pink-600 text-xs font-semibold uppercase tracking-wider mb-3">
             <PenTool className="w-4 h-4" />
-            <span>Katalog Bakat</span>
+            <span>04 · Katalog Bakat</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-800 tracking-tight">
             Keahlian &amp; Seni Kreatif
           </h2>
-          <p className="text-slate-500 font-light text-sm sm:text-base mt-2">
+          <p className="text-base text-slate-500 font-light mt-3 leading-relaxed">
             Perpaduan matang kompetensi manajemen pemerintahan dengan kecermatan seni ilustrasi buatan tangan.
           </p>
           <div className="w-12 h-1 bg-pink-500 mx-auto mt-4 rounded-full" />
@@ -31,7 +31,7 @@ export default function Skills() {
 
             {/* Skill Tags */}
             <div className="bg-white border border-slate-100/80 rounded-3xl p-6 sm:p-8 shadow-xs">
-              <h3 className="text-xl font-extrabold text-slate-800 tracking-tight mb-1">Keahlian Khusus</h3>
+              <h3 className="text-xl font-bold text-slate-800 tracking-tight mb-1">Keahlian Khusus</h3>
               <p className="text-xs text-slate-400 font-light mb-6 text-left">
                 Berdasarkan evaluasi kontribusi organisasi di BPM FIA UI, Girl Up UI, dan performa akademis SMAS BPS&amp;K I Jakarta.
               </p>
@@ -64,7 +64,7 @@ export default function Skills() {
             <div className="bg-white border border-slate-100/80 rounded-3xl p-6 sm:p-8 shadow-xs">
               <div className="flex items-center gap-2 mb-5">
                 <Wrench className="w-4 h-4 text-pink-500" />
-                <h3 className="text-xl font-extrabold text-slate-800 tracking-tight">Alat &amp; Teknologi</h3>
+                <h3 className="text-xl font-bold text-slate-800 tracking-tight">Alat &amp; Teknologi</h3>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                 {TOOLS_DATA.map((tool, index) => (
@@ -92,7 +92,7 @@ export default function Skills() {
           <div className="lg:col-span-6 flex flex-col gap-4">
             <div className="flex items-center gap-2 mb-2">
               <Trophy className="w-4 h-4 text-pink-500" />
-              <h3 className="text-xl font-extrabold text-slate-800 tracking-tight">Sertifikasi &amp; Penghargaan</h3>
+              <h3 className="text-xl font-bold text-slate-800 tracking-tight">Sertifikasi &amp; Penghargaan</h3>
             </div>
             <p className="text-xs text-slate-400 font-light -mt-2 mb-2">
               Rekam jejak prestasi akademik dan kepemimpinan yang telah dicapai.
@@ -115,7 +115,7 @@ export default function Skills() {
                 {/* Content */}
                 <div className="flex-1 min-w-0">
                   <div className="flex items-start justify-between gap-2">
-                    <h4 className="text-sm font-extrabold text-slate-800 leading-snug">{item.title}</h4>
+                    <h4 className="text-base font-bold text-slate-800 leading-snug">{item.title}</h4>
                     <span className={`w-2 h-2 rounded-full flex-shrink-0 mt-1.5 ${item.dot}`} />
                   </div>
                   <p className="text-[11px] font-semibold text-slate-500 mt-0.5">{item.subtitle}</p>

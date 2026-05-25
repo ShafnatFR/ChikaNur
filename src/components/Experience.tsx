@@ -518,19 +518,19 @@ export default function Experience() {
   const rightCol = filteredExperience.filter((_, i) => i % 2 === 1);
 
   return (
-    <section id="experience" className="py-24 bg-white relative">
+    <section id="experience" className="py-32 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-20">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-pink-50 text-pink-600 text-xs font-semibold uppercase tracking-wider mb-3">
             <Briefcase className="w-4 h-4" />
-            <span>Portofolio Karya</span>
+            <span>03 · Portofolio Karya</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-800 tracking-tight">
             Pengalaman Utama
           </h2>
-          <p className="text-slate-500 font-light text-sm sm:text-base mt-2">
+          <p className="text-base text-slate-500 font-light mt-3 leading-relaxed">
             Klik tab kategori di bawah untuk menyaring kontribusi kepemimpinan, riset akademik, dan wirausaha kreatif Chika.
           </p>
           <div className="w-12 h-1 bg-pink-500 mx-auto mt-4 rounded-full" />
